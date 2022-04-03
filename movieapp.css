@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --pcolor: #22254b;
+  --scolor: #373b69;
+}
+
+body {
+  background-color: var(--pcolor);
+  margin: 0%;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--scolor);
+}
+.search {
+  background-color: transparent;
+  border: 2px solid var(--pcolor);
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+.search::placeholder {
+  color: #7378c5;
+}
+.search:focus {
+  outline: none;
+  background-color: var(--pcolor);
+}
+#main {
+  display: flex;
+  flex-wrap: wrap;
+}
+.movie {
+  width: 300px;
+  margin: 1rem;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  background-color: var(--scolor);
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.movie img {
+  width: 100%;
+}
+.movie-info {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+.movie-info h3 {
+  margin-top: 0px;
+}
+.movie-info span {
+  background-color: var(--pcolor);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+.movie-info span.red {
+  color: red;
+}
+.movie-info span.green {
+  color: green;
+}
+.movie-info span.orange {
+  color: orange;
+}
+.overview {
+  background-color: white;
+
+  padding: 2rem;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
+}
+.movie:hover .overview {
+  transform: translateX(0);
+}
+footer {
+  color: white;
+  background-color: var(--scolor);
+  padding: 16px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.start {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content {
+  padding: 0 8px;
+}
+.heart {
+  color: red;
+}
+
+@media screen and (max-width: 380px) {
+  .marq,
+  .end {
+    display: none;
+  }
+  .movie {
+    margin: 1rem 1.5rem;
+    width: 400px;
+  }
+   .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
